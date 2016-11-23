@@ -19,7 +19,9 @@
 	<body ng-controller="MyController" class="container">
 		<div class="row">
 			<h1>Chat Room JHIN</h1>
-			<div class="col-md-1"></div>
+			<div class="col-md-1">
+				<img src="img/jhin-face2.jpg" class="img-rounded" width="100%">
+			</div>
 			<div class="col-md-10">
 				<div style="height:500px; overflow:hidden;overflow-y:scroll;" id="chat-area" ng-scrollable> 
 					<div ng-repeat="talk in chat track by $index">
@@ -38,7 +40,8 @@
 				<button class="btn btn-default" ng-click="onClickTalk()">発言</button>
 			</div>
 			<div class="col-md-1">
-			<img src="img/jhin-wallpaper.jpg" class="img-rounded" width="100%"><br></div>
+				<img src="img/jhin-face.jpg" class="img-rounded" width="100%">
+			</div>
 		</div>
 
 		<br>

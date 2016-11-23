@@ -94,6 +94,7 @@ angular.module('myApp', [])
 			var select_num = Math.floor( Math.random() * $scope.list.length ) ;
 			var result = $scope.list[select_num];
 			$scope.chat.push({ you:$scope.input_string, jhin:result});
+			$scope.input_string="";
 			//var scrollHeight = document.getElementById("chat-area").scrollHeight;
 			//document.getElementById("chat-area").scrollTop = scrollHeight;
 
