@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Chat Room JHIN</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="js/test.js"></script>
+	</head>
+
+	<body ng-controller="MyController" class="container">
+		<div class="row">
+			<h1>Chat Room JHIN</h1>
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<div style="height:500px; overflow:hidden;overflow-y:scroll;" id="chat-area" ng-scrollable> 
+					<div ng-repeat="talk in chat track by $index">
+						<div class="container-fluid"><div class="row">
+				
+							<div class="alert alert-info col-md-7" role="alert">{{talk["you"]}}</div>
+							<div class="col-md-5"></div>
+						</div></div>
+						<div class="container-fluid"><div class="row">
+							<div class="col-md-5"></div>
+							<div class="alert alert-info text-right col-md-7" role="alert">{{talk["jhin"]}}</div>
+						</div></div>
+					</div>
+				</div>
+				<input type="text" class="form-control" ng-model="input_string">
+				<button class="btn btn-default" ng-click="onClickTalk()">発言</button>
+			</div>
+			<div class="col-md-1">
+			<img src="img/jhin-wallpaper.jpg" class="img-rounded" width="100%"><br></div>
+		</div>
+
+		<br>
+
+		<hr>
+
+		<!--
+		<button ng-click="onClickUranai()">占う...</button>
+		<h2>今日は... </h2>
+		<h2><div class="alert alert-info" role="alert" ng_if="result != ''">{{result}}</div></h2>
+		<h2 ng_if="result == ''"><div class="alert" role="alert">　　</div></h2>
+		
+		<img src="img/jhin-wallpaper.jpg" class="img-rounded" width="100%"><br>
+		-->
+		<a href="https://www.youtube.com/watch?v=OjBB5MshyBY">眠る...</a>	
+
+		
+	</body>	
+</html>
